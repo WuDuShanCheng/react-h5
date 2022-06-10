@@ -1,0 +1,265 @@
+@import "variable.less";
+
+.page {
+  background-color: #f7f8fa;
+  height: 100%;
+}
+
+
+.pointer {
+  cursor: pointer;
+}
+
+
+//高度100%
+.vh-100 {
+  height: 100vh;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.vw-100 {
+  width: 100vw;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+
+.loop(@counter) when(@counter > 0) {
+  .h-@{counter} {
+    height: @counter+0% !important;
+  }
+
+  .h@{counter} {
+    height: @counter+0px !important;
+  }
+  .w@{counter} {
+    width: @counter+0px !important;
+  }
+
+  .mt@{counter} {
+    margin-top: @counter+0px !important;
+  }
+  .mr@{counter} {
+    margin-right: @counter+0px !important;
+  }
+  .mb@{counter} {
+    margin-bottom: @counter+0px !important;
+  }
+  .ml@{counter} {
+    margin-left: @counter+0px !important;
+  }
+  .pt@{counter} {
+    padding-top: @counter+0px !important;
+  }
+  .pr@{counter} {
+    padding-right: @counter+0px !important;
+  }
+  .pb@{counter} {
+    padding-bottom: @counter+0px !important;
+  }
+  .pl@{counter} {
+    padding-left: @counter+0px !important;
+  }
+
+  .f@{counter} {
+    font-size: @counter+0px !important;
+  }
+
+  .loop((@counter - 1)); //递归调用自身
+}
+
+.loop(100);
+
+
+.fb {
+  font-weight: bold;
+}
+
+.mla{
+  margin-left: auto;
+}
+
+// fixed布局
+.fixed{
+  position: fixed;
+}
+
+// flex布局
+.flex,
+.flex-column {
+  display: flex;
+
+  &.inline {
+    display: inline-flex;
+  }
+
+  //折行
+  &.flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &.flex-wrap {
+    flex-wrap: wrap;
+  }
+
+  &.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
+
+  //横向对齐方式
+  &.row-left {
+    justify-content: flex-start;
+  }
+
+  &.row-right {
+    justify-content: flex-end;
+  }
+
+  &.row-center {
+    justify-content: center;
+  }
+
+  &.row-between {
+    justify-content: space-between;
+  }
+
+  &.row-around {
+    justify-content: space-around;
+  }
+
+  //纵向对齐方式
+  &.col-top {
+    align-items: flex-start;
+  }
+
+  &.col-bottom {
+    align-items: flex-end;
+  }
+
+  &.col-center {
+    align-items: center;
+  }
+
+  &.col-baseline {
+    align-items: baseline;
+  }
+
+  &.col-stretch {
+    align-items: stretch;
+  }
+
+  // 纵向flex
+  &.flex-column {
+    flex-direction: column;
+    //横向对齐方式
+    &.row-center {
+      align-items: center;
+    }
+
+    &.row-left {
+      align-items: flex-start;
+    }
+
+    &.row-right {
+      align-items: flex-end;
+    }
+
+    &.row-between {
+      align-items: stretch;
+    }
+
+    &.col-center {
+      justify-content: center;
+    }
+
+    &.col-top {
+      justify-content: flex-start;
+    }
+
+    &.col-bottom {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.ellipsis-1 {
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  line-height: normal;
+}
+
+
+// 字体颜色
+.f-grey {
+  color: @color-grey;
+}
+
+.f-white {
+  color: #ffffff;
+}
+
+.f-red {
+  color: @color-red;
+}
+
+.f-black {
+  color: @color-black;
+}
+
+.f-blue {
+  color: @color-blue
+}
+
+.f-dark-grey {
+  color: rgba(32, 39, 47, 1);
+}
+
+.f-theme {
+  color: @color-theme;
+}
+
+.f-countDowm {
+  color: #fed5c3;
+}
+
+.f-h5-theme {
+  color: @h5-color-theme !important;
+}
+
+.f-h5-grey {
+  color: #c7c8c9;
+}
+
+.bg-theme {
+  background: @color-theme;
+}
+
+// flex居中
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+//分割线
+.filter-line{
+  height: 1px;
+  width: 100%;
+  background-color: #f6f6f6;
+  zoom: 0.5;
+}
+
+#root {
+  height: 100%;
+}
