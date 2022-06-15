@@ -8,13 +8,13 @@ const menuList = [
     path: "/dashboard",
     icon: "HomeOutlined",
     roles:["admin","editor","guest"]
-  }
-  // {
-  //   title: "引导页",
-  //   path: "/guide",
-  //   icon: "key",
-  //   roles:["admin","editor"]
-  // },
+  },
+  {
+    title: "引导页",
+    path: "/guide",
+    icon: "KeyOutlined",
+    roles:["admin","editor"]
+  },
   // {
   //   title: "权限测试",
   //   path: "/permission",

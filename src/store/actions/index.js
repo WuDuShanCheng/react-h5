@@ -1,9 +1,15 @@
 import { login, logout } from "./auth";
 import { getUserInfo } from "./user";
-import { addTag } from "./tagsView";
+import { toggleSiderBar,toggleSettingPanel } from "./app";
+import { addTag, emptyTaglist, deleteTag, closeOtherTags } from "./tagsView";
 export {
   login,
   logout,
   getUserInfo,
-  addTag
+  toggleSiderBar,
+  toggleSettingPanel,
+  addTag,
+  emptyTaglist,
+  deleteTag,
+  closeOtherTags,
 };

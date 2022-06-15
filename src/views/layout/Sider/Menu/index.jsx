@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "antd";
-import Icon from '@/component/Icon';
+import Icon from '@/components/Icon';
 import { Link, withRouter } from "react-router-dom";
 import { Scrollbars } from "react-custom-scrollbars";
 import { connect } from "react-redux";
